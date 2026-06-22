@@ -1,11 +1,5 @@
-from database.db import create_tables, insert_observation
-from collectors.reddit.collect import collect_posts
+from agents.orchestrator.orchestrator import OrchestratorAgent
 
-create_tables()
-
-observations = collect_posts()
-
-for observation in observations:
-    insert_observation(observation)
-
-print(f"Stored {len(observations)} observations.")
+if __name__ == "__main__":
+    orchestrator = OrchestratorAgent()
+    orchestrator.run_cycle()
