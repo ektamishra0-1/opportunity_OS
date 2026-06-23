@@ -16,3 +16,16 @@ class Observation:
         self.author = author
         self.url = url
         self.timestamp = timestamp
+
+class Problem:
+    def __init__(
+        self,
+        observation_title,
+        problem_text,
+        category,
+        confidence
+    ):
+        self.observation_title = observation_title
+        self.problem_text = problem_text
+        self.category = category
+        self.confidence = confidence
